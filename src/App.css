@@ -83,7 +83,6 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 
@@ -93,4 +92,33 @@ video {
 
 .headder {
   background-color: rgb(196, 16, 16);
+  height: 50px;
+}
+
+.teamCard {
+  background-color: rgb(230, 227, 227);
+  display: flex;
+  justify-content: center;
+}
+
+.pokeCard {
+  background-color: rgb(190, 190, 190);
+  width: 30%;
+  height: 400px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 250px;
+  margin-bottom: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.pokeName {
+  text-transform: capitalize;
+}
+
+.stats {
+  list-style: none;
 }
