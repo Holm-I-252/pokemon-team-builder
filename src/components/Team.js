@@ -23,6 +23,7 @@ class Team extends Component {
       types4: [],
       types5: [],
       types6: [],
+      signedIn: false,
     };
     this.handleName1 = this.handleName1.bind(this);
     this.handleName2 = this.handleName2.bind(this);

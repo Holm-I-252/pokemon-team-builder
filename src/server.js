@@ -15,7 +15,11 @@ const client = new Client({
   database: "dk5or80r8sd7n",
 });
 
-client.connect()
+client.connect();
+
+app.get("/api/signIn", (req, res) => {
+  console.log("hit");
+});
 
 const port = process.env.PORT || 4005;
 

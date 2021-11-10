@@ -93,12 +93,20 @@ video {
 .headder {
   background-color: rgb(196, 16, 16);
   height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .title {
   padding-top: 5px;
   color: white;
   font-size: x-large;
+}
+
+.accountArea {
+  display: flex;
+  flex-direction: row;
 }
 
 .teamCard {
@@ -113,8 +121,8 @@ video {
   height: 400px;
   margin-right: 20px;
   margin-left: 20px;
-  margin-top: 250px;
-  margin-bottom: 250px;
+  margin-top: 150px;
+  margin-bottom: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -127,4 +135,8 @@ video {
 
 .stats {
   list-style: none;
+}
+
+.chart {
+  margin-bottom: 30px;
 }
