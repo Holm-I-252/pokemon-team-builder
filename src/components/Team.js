@@ -32,6 +32,8 @@ class Team extends Component {
     this.handleName6 = this.handleName6.bind(this);
   }
 
+  //methods for adding pokemon to a card
+
   async addPoke1(name) {
     let res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`);
     let data = res.data;
@@ -86,6 +88,8 @@ class Team extends Component {
       this.setState({ types6: [...this.state.types6, element.type.name] });
     });
   }
+
+  //methods for updating the input for each slot
 
   handleName1(event) {
     this.setState({ name1: event.target.value });
