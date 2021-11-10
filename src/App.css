@@ -95,14 +95,20 @@ video {
   height: 50px;
 }
 
+.title {
+  padding-top: 5px;
+  color: white;
+  font-size: x-large;
+}
+
 .teamCard {
-  background-color: rgb(230, 227, 227);
+  background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
 }
 
 .pokeCard {
-  background-color: rgb(190, 190, 190);
+  background-color: rgb(224, 224, 224);
   width: 30%;
   height: 400px;
   margin-right: 20px;

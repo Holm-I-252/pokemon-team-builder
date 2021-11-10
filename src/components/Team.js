@@ -157,6 +157,15 @@ class Team extends Component {
                         {this.state.poke1.data.stats[5].base_stat}
                       </li>
                     </ul>
+                    <button
+                      className="clearBtn"
+                      onClick={() => {
+                        this.setState({ poke1: { full: false } });
+                        this.setState({ types1: [] });
+                      }}
+                    >
+                      Clear
+                    </button>
                   </div>
                 );
               default:
@@ -166,6 +175,7 @@ class Team extends Component {
                     onSubmit={(e) => {
                       e.preventDefault();
                       this.addPoke1(this.state.name1);
+                      this.setState({ name1: "" });
                     }}
                   >
                     <input
@@ -220,6 +230,15 @@ class Team extends Component {
                         {this.state.poke2.data.stats[5].base_stat}
                       </li>
                     </ul>
+                    <button
+                      className="clearBtn"
+                      onClick={() => {
+                        this.setState({ poke2: { full: false } });
+                        this.setState({ types2: [] });
+                      }}
+                    >
+                      Clear
+                    </button>
                   </div>
                 );
               default:
@@ -229,6 +248,7 @@ class Team extends Component {
                     onSubmit={(e) => {
                       e.preventDefault();
                       this.addPoke2(this.state.name2);
+                      this.setState({ name2: "" });
                     }}
                   >
                     <input
@@ -283,6 +303,15 @@ class Team extends Component {
                         {this.state.poke3.data.stats[5].base_stat}
                       </li>
                     </ul>
+                    <button
+                      className="clearBtn"
+                      onClick={() => {
+                        this.setState({ poke3: { full: false } });
+                        this.setState({ types3: [] });
+                      }}
+                    >
+                      Clear
+                    </button>
                   </div>
                 );
               default:
@@ -292,6 +321,7 @@ class Team extends Component {
                     onSubmit={(e) => {
                       e.preventDefault();
                       this.addPoke3(this.state.name3);
+                      this.setState({ name3: "" });
                     }}
                   >
                     <input
@@ -346,6 +376,15 @@ class Team extends Component {
                         {this.state.poke4.data.stats[5].base_stat}
                       </li>
                     </ul>
+                    <button
+                      className="clearBtn"
+                      onClick={() => {
+                        this.setState({ poke4: { full: false } });
+                        this.setState({ types4: [] });
+                      }}
+                    >
+                      Clear
+                    </button>
                   </div>
                 );
               default:
@@ -355,6 +394,7 @@ class Team extends Component {
                     onSubmit={(e) => {
                       e.preventDefault();
                       this.addPoke4(this.state.name4);
+                      this.setState({ name4: "" });
                     }}
                   >
                     <input
@@ -409,6 +449,15 @@ class Team extends Component {
                         {this.state.poke5.data.stats[5].base_stat}
                       </li>
                     </ul>
+                    <button
+                      className="clearBtn"
+                      onClick={() => {
+                        this.setState({ poke5: { full: false } });
+                        this.setState({ types5: [] });
+                      }}
+                    >
+                      Clear
+                    </button>
                   </div>
                 );
               default:
@@ -418,6 +467,7 @@ class Team extends Component {
                     onSubmit={(e) => {
                       e.preventDefault();
                       this.addPoke5(this.state.name5);
+                      this.setState({ name5: "" });
                     }}
                   >
                     <input
@@ -472,6 +522,15 @@ class Team extends Component {
                         {this.state.poke6.data.stats[5].base_stat}
                       </li>
                     </ul>
+                    <button
+                      className="clearBtn"
+                      onClick={() => {
+                        this.setState({ poke6: { full: false } });
+                        this.setState({ types6: [] });
+                      }}
+                    >
+                      Clear
+                    </button>
                   </div>
                 );
               default:
@@ -481,6 +540,7 @@ class Team extends Component {
                     onSubmit={(e) => {
                       e.preventDefault();
                       this.addPoke6(this.state.name6);
+                      this.setState({ name6: "" });
                     }}
                   >
                     <input
