@@ -131,9 +131,52 @@ video {
   border-radius: 15px;
 }
 
-@media screen and (max-width: 400px) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
   .html {
-    width: 400px;
+    max-width: 400px;
+  }
+  .teamCard {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .pokeCard {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 300px;
+    max-width: 90px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  .addForm {
+    max-width: 100px;
+  }
+  .pickName {
+    max-width: 80px;
+  }
+  .pokeInfo {
+    max-height: 290px;
+  }
+  li {
+    font-size: small;
+  }
+  .pokeNumber {
+    font-size: small;
+  }
+  img {
+    height: 50px;
+  }
+  .chart {
+    width: 350px;
+    height: 200px;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 4) {
+  .html {
+    max-width: 400px;
   }
   .teamCard {
     display: flex;
