@@ -131,7 +131,7 @@ video {
   border-radius: 15px;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .html {
     width: 400px;
   }
@@ -144,7 +144,7 @@ video {
     display: flex;
     flex-wrap: wrap;
     max-height: 300px;
-    max-width: 100px;
+    max-width: 90px;
     margin-bottom: 20px;
     margin-top: 20px;
     margin-right: 5px;
