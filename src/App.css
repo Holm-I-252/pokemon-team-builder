@@ -92,6 +92,7 @@ video {
 
 .headder {
   background-color: rgb(196, 16, 16);
+  width: auto;
   height: 50px;
   display: flex;
   flex-direction: row;
@@ -102,6 +103,7 @@ video {
   padding-top: 5px;
   color: white;
   font-size: x-large;
+  margin-left: 20px;
 }
 
 .accountArea {
@@ -117,8 +119,8 @@ video {
 
 .pokeCard {
   background-color: rgb(224, 224, 224);
-  width: 30%;
-  height: 400px;
+  width: 20rem;
+  height: 25rem;
   margin-right: 20px;
   margin-left: 20px;
   margin-top: 150px;
@@ -129,8 +131,47 @@ video {
   border-radius: 15px;
 }
 
-.pokeName {
-  text-transform: capitalize;
+@media screen and (max-width: 375px) {
+  .html {
+    width: 400px;
+  }
+  .teamCard {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .pokeCard {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 300px;
+    max-width: 100px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  .addForm {
+    max-width: 100px;
+  }
+  .pickName {
+    max-width: 80px;
+  }
+  .pokeInfo {
+    max-height: 290px;
+  }
+  li {
+    font-size: small;
+  }
+  .pokeNumber {
+    font-size: small;
+  }
+  img {
+    height: 50px;
+  }
+  .chart {
+    width: 350px;
+    height: 200px;
+  }
 }
 
 .stats {
