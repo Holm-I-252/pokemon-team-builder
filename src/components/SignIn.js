@@ -34,14 +34,43 @@ class SignIn extends Component {
     this.setState({ signInPass: event.target.value });
   }
 
-  handleLogIn(event) {
+  async handleLogIn(event) {
     event.preventDefault();
-    console.log(this.state.signInPass, this.state.signInUsername);
+    let userExists = false;
+    let userData = [];
+
+    let res = await axios.get("http://localhost:4005/api/signIn");
+
+    res.data.forEach((element) => {
+      if (
+        element.user === this.state.signInUsername &&
+        element.password === this.state.signInPass
+      ) {
+        userExists = true;
+        userData = element;
+      }
+    });
+
+    if (this.state.signInUsername === "" || this.state.signInPass === "") {
+      alert("Please enter values in all fields");
+    } else if (userExists === false) {
+      alert(
+        "Incorrect username or password. Please try again or create an account."
+      );
+    } else {
+      this.props.setStateUser(true);
+      this.props.setStateUserData(userData);
+    }
+
+    this.setState({ signInUsername: "" });
+    this.setState({ signInPass: "" });
   }
 
   handleNewUser(event) {
     event.preventDefault();
     console.log(this.state.createUsername, this.state.createPass);
+    this.setState({ createUsername: "" });
+    this.setState({ createPass: "" });
   }
 
   render() {

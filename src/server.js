@@ -1,5 +1,4 @@
 const express = require("express");
-const axios = require("axios");
 const path = require("path");
 const { Client } = require("pg");
 
@@ -7,18 +6,42 @@ const app = express();
 
 app.use(express.json());
 
-const client = new Client({
-  host: "ec2-107-20-127-127.compute-1.amazonaws.com",
-  user: "cztcbltljuswke",
-  port: 5432,
-  password: "8d7321da5a384eff4ddc288cb5c01763e343a085974c6cce90916347518cae51",
-  database: "dk5or80r8sd7n",
+app.use(function (req, res, next) {
+  res.setHeader("Access-Control-Allow-Origin", "*"); //Maybe work out another solution for this before hosting
+  next();
 });
 
-client.connect();
+const client = new Client({
+  host: "localhost",
+  user: "postgres",
+  port: 5432,
+  password: "Arsenal@25",
+  database: "pokemon-team",
+});
 
-app.get("/api/signIn", (req, res) => {
-  console.log("hit");
+client
+  .connect()
+  .then(() => console.log("connected"))
+  .catch((err) => console.error("connection error", err.stack));
+
+let rows = [];
+let error = [];
+
+app.get("/api/signIn", async (req, res) => {
+  client.query(`SELECT * FROM users;`, (err, res) => {
+    if (!err) {
+      rows = res.rows;
+    } else {
+      console.log(err.message);
+      error = err.message;
+    }
+  });
+
+  if (rows !== []) {
+    res.status(200).send(rows);
+  } else {
+    res.status(400).send(error);
+  }
 });
 
 const port = process.env.PORT || 4005;

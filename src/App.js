@@ -9,6 +9,7 @@ class App extends Component {
     super();
     this.state = {
       signedIn: "",
+      userData: [],
     };
   }
   render() {
@@ -17,20 +18,34 @@ class App extends Component {
         <div className="headder">
           <h1 className="title">Team Builder</h1>
         </div>
-        {/* {(() => {
+        {(() => {
           switch (this.state.signedIn) {
-            case "true":
-              return <Team />;
+            case true:
+              return (
+                <div className="teamArea">
+                  <h1 className="welcomeUser">
+                    Welcome {this.state.userData.user}!
+                  </h1>
+                  <Team userData={this.state.userData} />
+                  <img src={chart} alt="chart" className="chart"></img>
+                </div>
+              );
             default:
               return (
                 <div className="signInArea">
-                  <SignIn />
+                  <SignIn
+                    setStateUser={(p) => {
+                      this.setState({ signedIn: p });
+                      console.log(this.state.signedIn);
+                    }}
+                    setStateUserData={(p) => {
+                      this.setState({ userData: p });
+                    }}
+                  />
                 </div>
               );
           }
-        })()} */}
-        <Team />
-        <img src={chart} alt="chart" className="chart"></img>
+        })()}
       </div>
     );
   }
